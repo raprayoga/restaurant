@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"" />
+    <title>Restaurant Apps Starter Project</title>
+    <script
+      src="https://kit.fontawesome.com/92d96e629d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <a href="/">Home</a>
+      <a href="#">Favorite</a>
+      <a href="https://github.com/raprayoga">About Us</a>
+    </div>
+
+    <nav>
+      <button class="navbar-btn" onclick="openNav()">
+        <i class="fas fa-bars"></i>
+      </button>
+      <img
+        src="./images/logo/ngemlLogo3.png"
+        alt="logo brand"
+        class="logo-brand"
+      />
+    </nav>
+
+    <div
+      class="hero-component"
+      style="background-image: url('./images/heros/hero-image_2.jpg')"
+    >
+      <div class="overlay"></div>
+      <div class="hero-text">
+        <img
+          src="./images/logo/ngemlLogo.png"
+          alt="logo brand"
+          class="logo-brand"
+        />
+        <h1>Ngemeal Yuk!</h1>
+        <p>temukan berbagai macam rekomendasi restoran dengan terbaik</p>
+      </div>
+    </div>
+
+    <main></main>
+  </body>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+</html>

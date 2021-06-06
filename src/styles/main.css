@@ -1,0 +1,117 @@
+.hero-component {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  height: 566px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-component h1 {
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.hero-component .hero-text,
+.hero-component img {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  z-index: 2;
+}
+
+.hero-text img {
+  width: 200px;
+}
+
+.hero-image {
+  flex: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6eec9;
+}
+
+.fa-bars {
+  color: #a20a0a;
+}
+
+.navbar-btn {
+  width: 44px;
+  height: 44px;
+  margin: 10px;
+  border: none;
+  background-color: #f6eec9;
+  cursor: pointer;
+}
+
+.logo-brand {
+  height: 100%;
+  width: 100px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #5b5b5b82;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: #a20a0a;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: black;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#mySidenav {
+  border-right: 1px solid black;
+}
+
+@font-face {
+  font-family: Atma-medium;
+  src: url(/assets/font/Atma/Atma-Medium.ttf);
+}
+
+@media only screen and (max-width: 768px) {
+  .display-1 {
+    font-size: 4rem;
+  }
+  .display-6 {
+    font-size: 2rem;
+  }
+}
