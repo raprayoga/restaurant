@@ -10,24 +10,44 @@
     ></script>
   </head>
   <body>
+    <a href="#title" class="skip-link">Menuju ke konten utama</a>
+
     <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
-        >&times;</a
+      <button
+        href="javascript:void(0)"
+        class="close-btn"
+        onclick="closeNav()"
+        aria-label="close side nav"
       >
+        &times;
+      </button>
       <a href="/">Home</a>
       <a href="#">Favorite</a>
       <a href="https://github.com/raprayoga">About Us</a>
     </div>
 
     <nav>
-      <button class="navbar-btn" onclick="openNav()">
-        <i class="fas fa-bars"></i>
-      </button>
       <img
         src="./images/logo/ngemlLogo3.png"
-        alt="logo brand"
+        alt="ngemeal logo brand"
         class="logo-brand"
       />
+      <button class="burger-btn" onclick="openNav()" aria-label="open side nav">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="navigation-menu">
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="#">Favorite</a>
+          </li>
+          <li>
+            <a href="https://github.com/raprayoga">About Us</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <div
@@ -35,18 +55,28 @@
       style="background-image: url('./images/heros/hero-image_2.jpg')"
     >
       <div class="overlay"></div>
-      <div class="hero-text">
+      <div class="hero">
         <img
           src="./images/logo/ngemlLogo.png"
-          alt="logo brand"
+          alt="ngemeal logo brand"
           class="logo-brand"
         />
-        <h1>Ngemeal Yuk!</h1>
-        <p>temukan berbagai macam rekomendasi restoran dengan terbaik</p>
+        <h1 tabindex="0">Ngemeal Yuk!</h1>
+        <p tabindex="0">
+          Temukan berbagai macam rekomendasi restoran dengan terbaik
+        </p>
       </div>
     </div>
 
-    <main></main>
+    <main>
+      <div id="title">
+        <h2>Explore Restaurant</h2>
+
+        <div id="list"></div>
+      </div>
+    </main>
+
+    <footer>copyright &copy; 2021 - <span> nGemeal</span></footer>
   </body>
 
   <script>

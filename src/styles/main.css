@@ -1,3 +1,17 @@
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
 .hero-component {
   position: relative;
   display: flex;
@@ -11,19 +25,44 @@
   justify-content: center;
 }
 
+.navigation-menu {
+  display: none;
+}
+
+.navigation-menu ul li {
+  display: inline;
+  margin-right: 2rem;
+}
+
+.navigation-menu ul li a {
+  text-decoration: none;
+  color: #a20a0a;
+}
+
+.navigation-menu ul li a:hover {
+  color: #fc6a6a;
+}
+
 .hero-component h1 {
   font-weight: bolder;
   font-size: 3rem;
 }
 
-.hero-component .hero-text,
+.hero {
+  display: flex;
+  flex-direction: column;
+  text-shadow: 1px 1px black;
+}
+
+.hero-component .hero,
 .hero-component img {
   padding-left: 2rem;
   padding-right: 2rem;
   z-index: 2;
+  margin: auto;
 }
 
-.hero-text img {
+.hero img {
   width: 200px;
 }
 
@@ -41,7 +80,7 @@ nav {
   color: #a20a0a;
 }
 
-.navbar-btn {
+.burger-btn {
   width: 44px;
   height: 44px;
   margin: 10px;
@@ -70,7 +109,7 @@ nav {
   position: fixed;
   z-index: 99;
   top: 0;
-  left: 0;
+  right: 0;
   background-color: #a20a0a;
   overflow-x: hidden;
   transition: 0.3s;
@@ -90,16 +129,94 @@ nav {
   color: black;
 }
 
-.sidenav .closebtn {
+.sidenav .close-btn {
   position: absolute;
   top: 0;
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+  background-color: #a20a0a;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+  height: 44px;
 }
 
 #mySidenav {
   border-right: 1px solid black;
+}
+
+main {
+  margin: 3.5rem 2.5rem;
+}
+
+#title h2 {
+  text-align: center;
+}
+
+#list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-item {
+  padding: 0.6rem;
+  flex-basis: 100%;
+  margin-bottom: 2rem;
+  border-radius: 5%;
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 350px;
+  background-color: #f6eec9;
+  flex-direction: column;
+  box-shadow: 3px 3px 5px #000000b8;
+  display: flex;
+}
+
+.image-wrap {
+  position: relative;
+}
+
+.card-item img {
+  width: 100%;
+  border-radius: 5%;
+  position: relative;
+  height: 200px;
+}
+
+.image-wrap p {
+  color: white;
+  position: absolute;
+  top: 10px;
+  background-color: #a20a0a;
+  padding: 8px;
+  box-shadow: 3px 3px 5px #000000b8;
+  border-radius: 0 0 10px 0;
+}
+
+.card-item h3 {
+  margin-top: 4px;
+  margin-bottom: 5px;
+}
+
+.card-item .desc {
+  overflow: hidden;
+  font-size: smaller;
+  margin-top: 0;
+}
+
+footer {
+  background-color: #f6eec9;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer span {
+  color: #a20a0a;
 }
 
 @font-face {
@@ -107,11 +224,33 @@ nav {
   src: url(/assets/font/Atma/Atma-Medium.ttf);
 }
 
-@media only screen and (max-width: 768px) {
-  .display-1 {
-    font-size: 4rem;
+@media only screen and (min-width: 768px) {
+  .hero {
+    text-align: center;
   }
-  .display-6 {
-    font-size: 2rem;
+
+  #list {
+    flex-direction: row;
+  }
+
+  main {
+    margin: 3.5rem 3.5rem;
+  }
+
+  .card-item {
+    flex-basis: 30%;
+    height: 300px;
+  }
+
+  .card-item img {
+    height: 150px;
+  }
+
+  .burger-btn {
+    display: none;
+  }
+
+  .navigation-menu {
+    display: block;
   }
 }
