@@ -37,6 +37,7 @@
 .navigation-menu ul li a {
   text-decoration: none;
   color: #a20a0a;
+  padding: 15px;
 }
 
 .navigation-menu ul li a:hover {
@@ -145,6 +146,10 @@ nav {
 #mySidenav {
   border-right: 1px solid black;
 }
+#mySidenav a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
 main {
   margin: 3.5rem 2.5rem;
@@ -252,5 +257,9 @@ footer span {
 
   .navigation-menu {
     display: block;
+  }
+
+  #mySidenav {
+    display: none;
   }
 }
