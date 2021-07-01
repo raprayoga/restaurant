@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 .skip-link {
   position: absolute;
   top: -40px;
@@ -146,21 +150,19 @@ nav {
 #mySidenav {
   border-right: 1px solid black;
 }
+
 #mySidenav a {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-main {
-  margin: 3.5rem 2.5rem;
 }
 
 #title h2 {
   text-align: center;
 }
 
+/* Home Menu */
 #list {
-  width: 100%;
+  margin: 3.5rem 2.5rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -206,11 +208,62 @@ main {
   margin-bottom: 5px;
 }
 
+.card-item h3 a {
+  color: #a20a0a;
+  text-decoration: none;
+}
+
+.card-item h3 a:hover {
+  color: #fb8989;
+}
+
 .card-item .desc {
   overflow: hidden;
   font-size: smaller;
   margin-top: 0;
 }
+/* Home Menu */
+
+/* Detail Menu */
+#restaurant {
+  margin: 3.5rem 1.5rem 4.5rem 1.5rem;
+}
+
+.image-info-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.image-info-wrap img {
+  width: 100%;
+}
+
+.restaurant-info h4,
+.restaurant-info p {
+  margin: 8px 0;
+}
+
+/* Detail Menu */
+
+/* Like Button */
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Like Button */
 
 footer {
   background-color: #f6eec9;
@@ -234,12 +287,18 @@ footer span {
     text-align: center;
   }
 
-  #list {
+  #list,
+  .image-info-wrap {
     flex-direction: row;
   }
 
-  main {
-    margin: 3.5rem 3.5rem;
+  .image-info-wrap img {
+    height: 330px;
+    flex-basis: 60%;
+  }
+
+  .restaurant-info {
+    flex-basis: 30%;
   }
 
   .card-item {

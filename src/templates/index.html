@@ -18,7 +18,7 @@
         alt="ngemeal logo brand"
         class="logo-brand"
       />
-      <button class="burger-btn" onclick="openNav()" aria-label="open side nav">
+      <button class="burger-btn" id="burger-btn" aria-label="open side nav">
         <i class="fas fa-bars"></i>
       </button>
       <div class="navigation-menu">
@@ -27,7 +27,7 @@
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="#">Favorite</a>
+            <a href="#/like">Favorite</a>
           </li>
           <li>
             <a href="https://github.com/raprayoga">About Us</a>
@@ -40,7 +40,7 @@
       <button
         href="javascript:void(0)"
         class="close-btn"
-        onclick="closeNav()"
+        id="close-btn"
         aria-label="close side nav"
       >
         &times;
@@ -50,42 +50,11 @@
       <a href="https://github.com/raprayoga">About Us</a>
     </div>
 
-    <div
-      class="hero-component"
-      style="background-image: url('./images/heros/hero-image_2.jpg')"
-    >
-      <div class="overlay"></div>
-      <div class="hero">
-        <img
-          src="./images/logo/ngemlLogo.png"
-          alt="ngemeal logo brand"
-          class="logo-brand"
-        />
-        <h1 tabindex="0">Ngemeal Yuk!</h1>
-        <p tabindex="0">
-          Temukan berbagai macam rekomendasi restoran dengan terbaik
-        </p>
-      </div>
-    </div>
+    <main id="root"></main>
 
-    <main>
-      <div id="title">
-        <h2>Explore Restaurant</h2>
-
-        <div id="list"></div>
-      </div>
-    </main>
-
-    <footer>copyright &copy; 2021 - <span> nGemeal</span></footer>
+    <footer>
+      copyright &copy; 2021 -
+      <span>nGemeal</span>
+    </footer>
   </body>
-
-  <script>
-    function openNav() {
-      document.getElementById("mySidenav").style.width = "250px";
-    }
-
-    function closeNav() {
-      document.getElementById("mySidenav").style.width = "0";
-    }
-  </script>
 </html>
