@@ -3,7 +3,7 @@ const CONFIG = {
   CACHE_NAME: new Date().toISOString(),
   DATABASE_NAME: 'ngemeal-database',
   DATABASE_VERSION: 1,
-  OBJECT_STORE_NAME: 'resturant',
+  OBJECT_STORE_NAME: 'ngemeal',
 };
 
 export default CONFIG;
