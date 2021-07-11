@@ -48,15 +48,13 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <div>
     <h3>Review</h3>
     <div id="list">
-    ${restaurant.customerReviews.map((review) => 
-      `
+    ${restaurant.customerReviews.map((review) => `
         <div class="card-item" style="height: 120px;">
           <h3 tabindex="0" arial-label="nama reviewer ${review.name}">${review.name}</h3>
           <small>${review.date}</small>
           <p class="desc" style="margin-top: 0.3rem" tabindex="0" arial-label="review ${review.review}">${review.review}</p>
         </div>
-        `
-        )}
+        `)}
     </div>
   </div>
 `;
