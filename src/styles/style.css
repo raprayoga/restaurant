@@ -211,6 +211,7 @@ nav {
 .card-item h3 a {
   color: #a20a0a;
   text-decoration: none;
+  padding: 12px 0;
 }
 
 .card-item h3 a:hover {
