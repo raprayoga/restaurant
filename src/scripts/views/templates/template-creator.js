@@ -1,22 +1,20 @@
 import CONFIG from '../../globals/config';
 
 const createRestaurantListTemplate = (restaurant) => `
-  <div class="restaurant-item">
-    <div class="card-item" data-id="${restaurant.id}">
-      <div class="image-wrap">
-        <img tabindex="0" alt="${restaurant.name} image" src="${
-    restaurant.pictureId
-      ? `${CONFIG.BASE_URL}/images/medium/${restaurant.pictureId}`
-      : 'https://picsum.photos/id/666/800/450?grayscale'
-  }">
-        <p tabindex="0">${restaurant.city}</p>
-      </div>
-      <p tabindex="0">Rating: ${restaurant.rating}</p>
-      <h3 class="restaurant-title" tabindex="0"><a href="${`/#/detail/${restaurant.id}`}">${
-    restaurant.name
-  }</a></h3>
-      <p class="desc" tabindex="0">${restaurant.description}</p>
+  <div class="card-item restaurant-item" data-id="${restaurant.id}">
+    <div class="image-wrap">
+      <img tabindex="0" alt="${restaurant.name} image" src="${
+  restaurant.pictureId
+    ? `${CONFIG.BASE_URL}/images/medium/${restaurant.pictureId}`
+    : 'https://picsum.photos/id/666/800/450?grayscale'
+}">
+      <p tabindex="0">${restaurant.city}</p>
     </div>
+    <p tabindex="0">Rating: ${restaurant.rating}</p>
+    <h3 class="restaurant-title" tabindex="0"><a href="${`/#/detail/${restaurant.id}`}">${
+  restaurant.name
+}</a></h3>
+    <p class="desc" tabindex="0">${restaurant.description}</p>
   </div>
 `;
 
