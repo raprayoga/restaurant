@@ -1,12 +1,20 @@
-import RestaurantSource from '../../data/restaurant-source';
-import { createRestaurantListTemplate } from '../templates/template-creator';
+import RestaurantSource from '../../data/restaurant-source'
+import { createRestaurantListTemplate } from '../templates/template-creator'
 
 const List = {
   async render() {
+    let fileName = null
+    const x = window.matchMedia('(max-width: 768px)')
+    if (x.matches) {
+      fileName = 'hero-image_2-small.jpg'
+    } else {
+      fileName = 'hero-image_2-large.jpg'
+    }
+
     return `
       <div
         class="hero-component"
-        style="background-image: url('./images/heros/hero-image_2.jpg');"
+        style="background-image: url('./images/heros/${fileName}');"
       >
         <div class="overlay"></div>
         <div class="hero">
@@ -26,16 +34,16 @@ const List = {
 
         <div id="list"></div>
       </div>
-    `;
+    `
   },
 
   async afterRender() {
-    const restaurants = await RestaurantSource.list();
-    const restaurantsContainer = document.querySelector('#list');
+    const restaurants = await RestaurantSource.list()
+    const restaurantsContainer = document.querySelector('#list')
     restaurants.forEach((restaurant) => {
-      restaurantsContainer.innerHTML += createRestaurantListTemplate(restaurant);
-    });
+      restaurantsContainer.innerHTML += createRestaurantListTemplate(restaurant)
+    })
   },
-};
+}
 
-export default List;
+export default List
